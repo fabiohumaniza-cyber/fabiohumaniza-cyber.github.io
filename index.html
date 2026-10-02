@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fabio Ferreira</title>
+<meta name="description" content="Fabio da Camara Oliveira Ferreira, enfermeiro e pesquisador. Medição de feridas por fotografia com regra escrita, pré-registrada e auditável.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ink:#241a13; --ink-2:#2b1f16; --paper:#f3ebdc; --card:#fbf6ec; --cream:#efe4cf; --cream-2:#f8f1e2;
+  --gold:#cfa955; --gold-2:#e3c27a; --gold-3:#9a7630; --line:#d6c6a8; --line-2:#e2d5bd; --line-dark:#5a4330; --line-footer:#4a3828;
+  --muted:#6b5442; --muted-2:#a8957a; --muted-3:#d9cbb2; --muted-4:#cdbd9f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--ink-2);font-family:'Public Sans',system-ui,sans-serif;font-size:17px;line-height:1.6}
+a{color:#3b2a1e;text-decoration-color:#b8913f;text-underline-offset:3px}
+a:hover{color:#000}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.serif{font-family:'Spectral',Georgia,serif}
+[data-lang="pt"] [lang="en"]{display:none}
+[data-lang="en"] [lang="pt"]{display:none}
+
+header{background:var(--ink);color:var(--cream)}
+header .wrap{padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-family:'Spectral',Georgia,serif;font-size:17px;letter-spacing:.02em}
+.lang{display:flex;gap:4px;align-items:center}
+.lang button{min-width:44px;min-height:44px;padding:0 10px;font:600 14px/1 'Public Sans',system-ui,sans-serif;letter-spacing:.08em;cursor:pointer;border:1px solid var(--line-dark);background:transparent;color:var(--muted-4)}
+.lang button[aria-pressed="true"]{background:var(--cream);color:var(--ink)}
+
+.hero{position:relative;background:var(--ink);color:var(--cream);padding:8px 0 72px;overflow:hidden}
+.hero .wrap{position:relative}
+.hero .wrap{display:flex;flex-direction:column;gap:28px}
+.art{display:flex;align-items:flex-end;gap:12px}
+.art svg{flex:1 1 60%;min-width:0;height:auto;display:block}
+.art .portrait{flex:0 0 36%;min-width:0;display:flex;flex-direction:column;align-items:center;gap:8px}
+.art .portrait img{width:100%;aspect-ratio:1100/1240;height:auto;object-fit:cover;object-position:top;display:block;opacity:.78;filter:sepia(.9) contrast(1.05);mask-image:radial-gradient(ellipse 70% 75% at 50% 42%,#000 55%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 70% 75% at 50% 42%,#000 55%,transparent 100%)}
+.art .portrait figcaption{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-2);text-align:center}
+@media (max-width:560px){.art{flex-direction:column;align-items:stretch}.art .portrait{flex-basis:auto;flex-direction:row;justify-content:flex-end;align-items:flex-end;gap:12px}.art .portrait img{width:46%}.art .portrait figcaption{text-align:right;padding-bottom:6px}}
+.hero h1{margin:0;font-weight:600;font-size:clamp(30px,6vw,46px);line-height:1.12;color:var(--cream-2)}
+.role{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.question{margin:0;font-family:'Spectral',Georgia,serif;font-style:italic;font-size:clamp(24px,4.6vw,34px);line-height:1.25;color:var(--cream);padding-top:22px;border-top:1px solid var(--line-dark)}
+
+main{background:var(--paper)}
+section{padding:48px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:20px}
+section:first-child{padding-top:64px;border-top:0}
+h2{margin:0;font-weight:600;font-size:28px;color:var(--ink)}
+p{margin:0}
+.about{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
+.about img{width:132px;height:158px;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(.35)}
+.about .text{flex:1 1 300px;display:flex;flex-direction:column;gap:14px}
+.small{font-size:14px;color:var(--muted)}
+
+article{background:var(--card);border:1px solid var(--line);padding:22px;display:flex;flex-direction:column;gap:10px}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h3{margin:0;font-weight:600;font-size:22px;line-height:1.3;color:var(--ink)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;font-size:15px}
+.mono{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:13px;color:var(--muted)}
+.meta a,.cta{font-weight:600;display:inline-block;padding:10px 0}
+
+ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column}
+li{padding:18px 0;border-top:1px solid var(--line-2);display:flex;gap:16px}
+li:last-child{border-bottom:1px solid var(--line-2)}
+li .n{font-family:'Spectral',Georgia,serif;font-size:20px;color:var(--gold-3);min-width:24px}
+li .body{display:flex;flex-direction:column;gap:4px}
+li .t{font-weight:600}
+li .hash{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:var(--muted)}
+li .note{font-size:15px;color:var(--muted)}
+
+.btn{display:inline-block;padding:12px 20px;background:var(--ink);color:var(--cream-2);text-decoration:none;font-weight:600}
+.btn:hover{color:#fff}
+
+footer{background:var(--ink);color:var(--muted-3);font-size:15px}
+footer .wrap{padding:40px 20px 48px;display:flex;flex-direction:column;gap:14px}
+footer .name{font-family:'Spectral',Georgia,serif;font-size:19px;color:var(--cream-2)}
+footer a{color:var(--gold-2)}
+footer .links{display:flex;flex-direction:column;gap:6px}
+footer .fine{font-size:13px;color:var(--muted-2);padding-top:14px;border-top:1px solid var(--line-footer)}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+<div class="brand">F. C. O. Ferreira</div>
+<div class="lang" role="group" aria-label="Idioma / Language">
+<button type="button" id="btn-pt" aria-pressed="true" onclick="setLang('pt')">PT</button>
+<button type="button" id="btn-en" aria-pressed="false" onclick="setLang('en')">EN</button>
+</div>
+</div>
+</header>
+
+<section class="hero" style="border-top:0">
+<div class="wrap">
+<div class="art">
+<svg viewBox="0 0 735 400" role="img" aria-labelledby="ilu-t">
+<title id="ilu-t">Uma fotografia de ferida com régua, e uma lente única dourada ampliando a borda da ferida.</title>
+<defs>
+<radialGradient id="bg" cx="0.5" cy="0.5" r="0.75"><stop offset="0" stop-color="#4a3a2c"/><stop offset="1" stop-color="#1f160f"/></radialGradient>
+<clipPath id="lensclip"><circle cx="430" cy="185" r="118"/></clipPath>
+<radialGradient id="glass" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/><stop offset="0.6" stop-color="#ffffff" stop-opacity="0.02"/><stop offset="1" stop-color="#000000" stop-opacity="0.12"/></radialGradient>
+<linearGradient id="rim" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1d58a"/><stop offset="0.5" stop-color="#c99d3c"/><stop offset="1" stop-color="#8a6b2a"/></linearGradient>
+<linearGradient id="handle" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a6b2a"/><stop offset="0.5" stop-color="#e3c27a"/><stop offset="1" stop-color="#8a6b2a"/></linearGradient>
+</defs>
+
+<!-- fotografia -->
+<g transform="translate(150 70) rotate(-4)">
+<rect x="6" y="8" width="300" height="260" fill="#120c08" opacity="0.55"/>
+<rect x="0" y="0" width="300" height="260" fill="#efe4cf"/>
+<rect x="16" y="16" width="268" height="196" fill="#dfbfae"/>
+<path d="M118 70 C 150 50, 200 58, 214 96 C 226 130, 206 166, 168 174 C 132 182, 100 164, 96 130 C 93 104, 100 82, 118 70 Z" fill="#b5524a"/>
+<path d="M134 92 C 156 80, 190 86, 196 112 C 202 136, 184 154, 160 156 C 136 158, 120 144, 120 122 C 120 108, 124 98, 134 92 Z" fill="#9b3f3a"/>
+<rect x="16" y="222" width="268" height="22" fill="#f8f1e2"/>
+<g stroke="#241a13" stroke-width="1.4">
+<line x1="24" y1="222" x2="24" y2="240"/><line x1="40" y1="222" x2="40" y2="231"/><line x1="56" y1="222" x2="56" y2="240"/><line x1="72" y1="222" x2="72" y2="231"/><line x1="88" y1="222" x2="88" y2="240"/><line x1="104" y1="222" x2="104" y2="231"/><line x1="120" y1="222" x2="120" y2="240"/><line x1="136" y1="222" x2="136" y2="231"/><line x1="152" y1="222" x2="152" y2="240"/><line x1="168" y1="222" x2="168" y2="231"/><line x1="184" y1="222" x2="184" y2="240"/><line x1="200" y1="222" x2="200" y2="231"/><line x1="216" y1="222" x2="216" y2="240"/><line x1="232" y1="222" x2="232" y2="231"/><line x1="248" y1="222" x2="248" y2="240"/><line x1="264" y1="222" x2="264" y2="231"/><line x1="280" y1="222" x2="280" y2="240"/>
+</g>
+<text x="22" y="254" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#6b5442">0</text>
+<text x="150" y="254" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#6b5442">2 cm</text>
+</g>
+
+<!-- lente: ampliação -->
+<g clip-path="url(#lensclip)">
+<rect x="312" y="67" width="236" height="236" fill="#dfbfae"/>
+<g transform="translate(430 185) scale(2.6) translate(-370 -151) translate(150 70) rotate(-4)">
+<path d="M118 70 C 150 50, 200 58, 214 96 C 226 130, 206 166, 168 174 C 132 182, 100 164, 96 130 C 93 104, 100 82, 118 70 Z" fill="#b5524a"/>
+<path d="M134 92 C 156 80, 190 86, 196 112 C 202 136, 184 154, 160 156 C 136 158, 120 144, 120 122 C 120 108, 124 98, 134 92 Z" fill="#9b3f3a"/>
+<path d="M118 70 C 150 50, 200 58, 214 96 C 226 130, 206 166, 168 174 C 132 182, 100 164, 96 130 C 93 104, 100 82, 118 70 Z" fill="none" stroke="#f8f1e2" stroke-width="1.1" stroke-dasharray="3 2"/>
+</g>
+<circle cx="430" cy="185" r="118" fill="url(#glass)"/>
+</g>
+<circle cx="430" cy="185" r="118" fill="none" stroke="url(#rim)" stroke-width="12"/>
+<circle cx="430" cy="185" r="124" fill="none" stroke="#2a1d12" stroke-width="2" opacity="0.6"/>
+<path d="M508 275 L 568 335" stroke="#2a1d12" stroke-width="30" stroke-linecap="round" opacity="0.5"/>
+<path d="M506 273 L 566 333" stroke="url(#handle)" stroke-width="22" stroke-linecap="round"/>
+<path d="M520 285 L 576 341" stroke="#f1d58a" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+<path d="M360 105 C 380 85, 410 77, 440 81" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.35" fill="none"/>
+</svg>
+<figure class="portrait" style="margin:0">
+<img src="leeuwenhoek.webp" alt="Antoni van Leeuwenhoek segurando seu microscópio de lente única. Gravura de Jan Verkolje, 1686." width="1100" height="1496">
+<figcaption lang="pt">Leeuwenhoek, 1686 · lente única</figcaption>
+<figcaption lang="en">Leeuwenhoek, 1686 · single lens</figcaption>
+</figure>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<h1>Fabio da Camara Oliveira Ferreira</h1>
+<div class="role"><span lang="pt">enfermeiro e pesquisador</span><span lang="en">nurse and researcher</span></div>
+</div>
+<p class="question"><span lang="pt">A borda da ferida existe na fotografia?</span><span lang="en">Is the wound edge in the photograph?</span></p>
+</div>
+</section>
+
+<main>
+<div class="wrap">
+
+<section id="sobre">
+<h2><span lang="pt">Sobre</span><span lang="en">About</span></h2>
+<div class="about">
+<img src="fabio.jpg" alt="Fabio Ferreira" width="132" height="158">
+<div class="text">
+<div lang="pt" style="display:flex;flex-direction:column;gap:14px">
+<p>Meço feridas por fotografia com uma regra escrita e congelada, publicada antes de ver o resultado. Publico o que falha com o mesmo peso do que funciona.</p>
+<p>Sou enfermeiro, e a pergunta nasceu do curativo, não do laboratório: se a borda que o olho vê ao trocar um curativo está de fato na imagem, uma regra simples deve conseguir encontrá-la, sem rede neural e sem observador.</p>
+</div>
+<div lang="en" style="display:flex;flex-direction:column;gap:14px">
+<p>I measure wounds from photographs with a written, frozen rule, published before I see the result. I report what fails with the same weight as what works.</p>
+<p>I am a nurse, and the question came from dressing wounds, not from a lab: if the edge the eye sees during a dressing change is really in the image, a simple rule should be able to find it, with no neural network and no observer.</p>
+</div>
+<div class="small">COREN-SP 284.219 · Águas de Lindóia, SP</div>
+</div>
+</div>
+</section>
+
+<section id="publicacoes">
+<h2><span lang="pt">Publicações</span><span lang="en">Publications</span></h2>
+
+<article>
+<div class="kicker"><span lang="pt">Preprint · Zenodo · 30 set 2026</span><span lang="en">Preprint · Zenodo · 30 Sep 2026</span></div>
+<h3>A borda da ferida existe na fotografia</h3>
+<p><span lang="pt">Em banco público de feridas suínas, contra punch de 20 mm, o motor recuperou a área com −2,3 % e Dice 0,967. Em ferida humana, não transferiu.</span><span lang="en">On a public porcine wound dataset, against a 20 mm punch, the engine recovered area at −2.3% with Dice 0.967. On human wounds it did not transfer.</span></p>
+<div class="meta">
+<span class="mono">DOI 10.5281/zenodo.23062849</span>
+<a href="https://zenodo.org/records/23062849"><span lang="pt">Ler no Zenodo</span><span lang="en">Read on Zenodo</span></a>
+</div>
+</article>
+
+<article>
+<div class="kicker"><span lang="pt">Demonstração · navegador</span><span lang="en">Demo · browser</span></div>
+<h3><span lang="pt">Demonstração no navegador</span><span lang="en">In-browser demonstration</span></h3>
+<p><span lang="pt">A regra roda no seu computador. A foto não sai dele.</span><span lang="en">The rule runs on your computer. The photo never leaves it.</span></p>
+<div style="font-size:15px"><a class="cta" href="https://fabiohumaniza-cyber.github.io/deolhonapele/"><span lang="pt">Abrir a demonstração</span><span lang="en">Open the demo</span></a></div>
+</article>
+</section>
+
+<section id="andamento">
+<h2><span lang="pt">Em andamento</span><span lang="en">In progress</span></h2>
+<p><span lang="pt">Cada estudo é pré-registrado com hash e data antes da análise. O resultado é publicado seja qual for.</span><span lang="en">Each study is pre-registered with a hash and date before analysis. The result is published whatever it is.</span></p>
+<ol>
+<li><span class="n">1</span><div class="body">
+<div class="t"><span lang="pt">Feridas de camundongo com tala</span><span lang="en">Splinted mouse wounds</span></div>
+<div style="font-size:15px">Dryad · <a href="https://doi.org/10.25338/B84W8Q">10.25338/B84W8Q</a></div>
+<div class="hash">SHA-256 [HASH] · [DATA]</div>
+</div></li>
+<li><span class="n">2</span><div class="body">
+<div class="t"><span lang="pt">Traçado cego de 50 feridas por avaliador humano</span><span lang="en">Blind tracing of 50 wounds by a human rater</span></div>
+<div class="hash">SHA-256 [HASH] · [DATA]</div>
+</div></li>
+<li><span class="n">3</span><div class="body">
+<div class="t"><span lang="pt">Comparação em feridas equinas</span><span lang="en">Comparison on equine wounds</span></div>
+<div class="note"><span lang="pt">Se houver colaborador.</span><span lang="en">If a collaborator joins.</span></div>
+</div></li>
+</ol>
+</section>
+
+<section id="colaborar" style="padding-bottom:72px">
+<h2><span lang="pt">Colaborar</span><span lang="en">Collaborate</span></h2>
+<p><span lang="pt">Se o seu grupo tem fotografias de ferida com régua na cena, proponho comparar a regra com as suas medidas sob um protocolo pré-registrado: hipótese, métrica e critério de falha fixados antes de qualquer análise. Quem contribui com dados entra como autor.</span><span lang="en">If your group has wound photographs with a ruler in the frame, I propose comparing the rule against your measurements under a pre-registered protocol: hypothesis, metric and failure criterion fixed before any analysis. Those who contribute data are co-authors.</span></p>
+<div><a class="btn" href="mailto:fabiohumaniza@gmail.com">fabiohumaniza@gmail.com</a></div>
+</section>
+
+</div>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="name">Fabio da Camara Oliveira Ferreira</div>
+<div class="links">
+<div>ORCID <a href="https://orcid.org/0009-0009-0997-3275">0009-0009-0997-3275</a></div>
+<div><a href="mailto:fabiohumaniza@gmail.com">fabiohumaniza@gmail.com</a></div>
+<div><span lang="pt">Repositório</span><span lang="en">Repository</span> <a href="https://github.com/fabiohumaniza-cyber/deolhonapele">github.com/fabiohumaniza-cyber/deolhonapele</a></div>
+</div>
+<div class="fine"><span lang="pt">Código e textos sob licença aberta. COREN-SP 284.219.</span><span lang="en">Code and texts under an open licence. COREN-SP 284.219.</span></div>
+</div>
+</footer>
+
+<script>
+function setLang(l){
+  document.documentElement.setAttribute('data-lang', l);
+  document.documentElement.lang = l === 'pt' ? 'pt-BR' : 'en';
+  document.getElementById('btn-pt').setAttribute('aria-pressed', l === 'pt');
+  document.getElementById('btn-en').setAttribute('aria-pressed', l === 'en');
+  try { localStorage.setItem('lang', l); } catch (e) {}
+}
+(function(){
+  var l = null;
+  try { l = localStorage.getItem('lang'); } catch (e) {}
+  if (!l && navigator.language && navigator.language.slice(0,2) !== 'pt') l = 'en';
+  if (l === 'en') setLang('en');
+})();
+</script>
+</body>
+</html>
