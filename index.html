@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fabio Ferreira</title>
-<meta name="description" content="Fabio da Camara Oliveira Ferreira, enfermeiro e pesquisador. Medição de área de feridas por fotografia com regra escrita, pré-registrada e auditável, em feridas humanas e veterinárias (suíno, camundongo, equino). Wound measurement from photographs, human and veterinary wounds.">
+<meta name="description" content="Fabio da Camara Oliveira Ferreira, enfermeiro e pesquisador. Delimitação de feridas e de lesões pigmentadas de pele por fotografia com regra escrita, pré-registrada e auditável. Wound and pigmented skin lesion delineation from photographs with a written, pre-registered rule.">
 <meta name="keywords" content="medição de ferida, área de ferida, fotografia de ferida, planimetria digital, feridas veterinárias, ferida equina, ferida suína, camundongo, cicatrização, wound measurement, wound area, digital planimetry, veterinary wound, equine wound, porcine wound model, wound healing">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -150,7 +150,7 @@ footer .fine{font-size:13px;color:var(--muted-2);padding-top:14px;border-top:1px
 <h1>Fabio da Camara Oliveira Ferreira</h1>
 <div class="role"><span lang="pt">enfermeiro e pesquisador</span><span lang="en">nurse and researcher</span></div>
 </div>
-<p class="question"><span lang="pt">A borda da ferida existe na fotografia?</span><span lang="en">Is the wound edge in the photograph?</span></p>
+<p class="question"><span lang="pt">A borda está na imagem?</span><span lang="en">Is the border in the image?</span></p>
 </div>
 </section>
 
@@ -163,11 +163,13 @@ footer .fine{font-size:13px;color:var(--muted-2);padding-top:14px;border-top:1px
 <img src="fabio.jpg" alt="Fabio Ferreira" width="132" height="158">
 <div class="text">
 <div lang="pt" style="display:flex;flex-direction:column;gap:14px">
-<p>Meço feridas por fotografia com uma regra escrita e congelada, publicada antes de ver o resultado. Publico o que falha com o mesmo peso do que funciona.</p>
+<p>Meço feridas e pintas por fotografia com uma regra escrita e congelada, publicada antes de ver o resultado. Publico o que falha com o mesmo peso do que funciona.</p>
+<p>O objetivo é a triagem de lesões de pele na atenção primária do SUS: um contorno que o profissional consegue auditar, e que diz quando não consegue medir.</p>
 <p>Sou enfermeiro, e a pergunta nasceu do curativo, não do laboratório: se a borda que o olho vê ao trocar um curativo está de fato na imagem, uma regra simples deve conseguir encontrá-la, sem rede neural e sem observador.</p>
 </div>
 <div lang="en" style="display:flex;flex-direction:column;gap:14px">
-<p>I measure wounds from photographs with a written, frozen rule, published before I see the result. I report what fails with the same weight as what works.</p>
+<p>I measure wounds and moles from photographs with a written, frozen rule, published before I see the result. I report what fails with the same weight as what works.</p>
+<p>The aim is skin lesion triage in Brazilian public primary care (SUS): a contour a clinician can audit, and that says when it cannot measure.</p>
 <p>I am a nurse, and the question came from dressing wounds, not from a lab: if the edge the eye sees during a dressing change is really in the image, a simple rule should be able to find it, with no neural network and no observer.</p>
 </div>
 <div class="small">COREN-SP 284.219 · Águas de Lindóia, SP</div>
@@ -177,6 +179,16 @@ footer .fine{font-size:13px;color:var(--muted-2);padding-top:14px;border-top:1px
 
 <section id="publicacoes">
 <h2><span lang="pt">Publicações</span><span lang="en">Publications</span></h2>
+
+<article>
+<div class="kicker"><span lang="pt">Preprint · Zenodo · 7 out 2026</span><span lang="en">Preprint · Zenodo · 7 Oct 2026</span></div>
+<h3>The border is in the image: a clinician-written, training-free rule delineates pigmented skin lesions in a pre-registered blind test of 1,000 dermoscopic images</h3>
+<p><span lang="pt">Regra escrita, sem treinamento, congelada por hash e rodada uma única vez em 1.000 imagens de dermatoscopia nunca vistas (ISIC 2018): Dice mediano 0,88, contando recusas como zero, contra 0,70 da limiarização de Otsu. Toda recusa vem com a causa escrita. Na métrica oficial do desafio ainda fica abaixo das redes neurais (0,54 contra 0,80), e o artigo diz isso.</span><span lang="en">A written, training-free rule, frozen by hash and run once on 1,000 unseen dermoscopic images (ISIC 2018): median Dice 0.88 with refusals scored as zero, against 0.70 for Otsu thresholding. Every refusal carries a written cause. On the challenge metric it still trails neural networks (0.54 against 0.80), and the paper says so.</span></p>
+<div class="meta">
+<span class="mono">DOI 10.5281/zenodo.23223876</span>
+<a href="https://doi.org/10.5281/zenodo.23223876"><span lang="pt">Ler no Zenodo</span><span lang="en">Read on Zenodo</span></a>
+</div>
+</article>
 
 <article>
 <div class="kicker"><span lang="pt">Preprint · Zenodo · 30 set 2026</span><span lang="en">Preprint · Zenodo · 30 Sep 2026</span></div>
@@ -201,15 +213,19 @@ footer .fine{font-size:13px;color:var(--muted-2);padding-top:14px;border-top:1px
 <p><span lang="pt">Cada estudo é pré-registrado com hash e data antes da análise. O resultado é publicado seja qual for.</span><span lang="en">Each study is pre-registered with a hash and date before analysis. The result is published whatever it is.</span></p>
 <ol>
 <li><span class="n">1</span><div class="body">
+<div class="t"><span lang="pt">Pintas: próxima versão (vinheta do dermatoscópio e lesão de duas cores)</span><span lang="en">Moles: next version (dermatoscope vignette and two-tone lesions)</span></div>
+<div class="note"><span lang="pt">Teste cego em imagens ainda não usadas, pré-registrado antes.</span><span lang="en">Blind test on images not yet used, pre-registered beforehand.</span></div>
+</div></li>
+<li><span class="n">2</span><div class="body">
 <div class="t"><span lang="pt">Feridas de camundongo com tala</span><span lang="en">Splinted mouse wounds</span></div>
 <div style="font-size:15px">Dryad · <a href="https://doi.org/10.25338/B84W8Q">10.25338/B84W8Q</a></div>
 <div class="hash">SHA-256 d0989cf7a2ff8ad1185744f4afca4b3c3071119401f844b7cd52281ac9dac9a8 · 30/09/2026</div>
 </div></li>
-<li><span class="n">2</span><div class="body">
+<li><span class="n">3</span><div class="body">
 <div class="t"><span lang="pt">Traçado cego de 50 feridas por avaliador humano</span><span lang="en">Blind tracing of 50 wounds by a human rater</span></div>
 <div class="note"><span lang="pt">Pré-registro a publicar.</span><span lang="en">Pre-registration to be published.</span></div>
 </div></li>
-<li><span class="n">3</span><div class="body">
+<li><span class="n">4</span><div class="body">
 <div class="t"><span lang="pt">Comparação em feridas equinas</span><span lang="en">Comparison on equine wounds</span></div>
 <div class="note"><span lang="pt">Se houver colaborador.</span><span lang="en">If a collaborator joins.</span></div>
 </div></li>
