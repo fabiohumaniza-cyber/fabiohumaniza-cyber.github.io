@@ -110,6 +110,42 @@ footer .fine{font-size:13px;color:var(--muted-2);padding-top:14px;border-top:1px
 .opponent h3{font-size:19px}
 .opponent p{margin:0}
 @media (max-width:420px){.fight{padding:24px 14px}.fight .ring{gap:8px}.fight .corner{padding:12px 8px}}
+
+/* a caverna e a ferida (19/11) */
+section.caverna{background:var(--ink);color:var(--cream);padding:8px 0 80px;border-top:0;position:relative;overflow:hidden;display:block}
+section.caverna::after{content:"";position:absolute;left:0;right:0;bottom:0;height:260px;background:radial-gradient(ellipse 60% 100% at 50% 100%,rgba(207,169,85,.16),transparent 70%);pointer-events:none}
+.caverna .wrap{position:relative;z-index:1;display:flex;flex-direction:column;gap:18px}
+.cav-kicker{padding-top:36px;border-top:1px solid var(--line-dark);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.caverna h2{color:var(--cream-2);font-size:clamp(28px,5vw,38px);line-height:1.15}
+.cav-dialogo{display:flex;flex-direction:column;gap:14px;font-family:'Spectral',Georgia,serif;font-size:clamp(17px,2.4vw,19px);line-height:1.62;color:var(--cream)}
+[data-lang="pt"] .cav-dialogo[lang="en"],[data-lang="en"] .cav-dialogo[lang="pt"]{display:none}
+.fala{margin:0}
+.fala .quem{display:block;font-family:'Public Sans',system-ui,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+.fala.g{padding-left:22px;border-left:1px solid var(--line-dark);color:var(--muted-3)}
+.fala.g .quem{color:var(--muted-2)}
+.cav-mais{display:flex;flex-direction:column}
+.cav-mais>.fala{margin-top:14px}
+.cav-mais>summary{list-style:none;cursor:pointer;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:10px 16px;margin:6px 0 4px;border:1px solid var(--gold-3);color:var(--gold-2);font:600 13px/1 'Public Sans',system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.cav-mais>summary::-webkit-details-marker{display:none}
+.cav-mais>summary::before{content:"";width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-4px;transition:transform .2s}
+.cav-mais[open]>summary::before{transform:rotate(-135deg);margin-top:4px}
+.cav-mais>summary:hover{background:rgba(207,169,85,.1)}
+.cav-mais>summary:focus-visible{outline:2px solid var(--gold-2);outline-offset:3px}
+.cav-mais .fecha,.cav-mais[open] .abre{display:none}
+.cav-mais[open] .fecha{display:inline}
+.cav-mais[open]>summary{order:2;margin-top:24px}
+.cav-mais>p:last-of-type{color:var(--cream-2)}
+.cav-credito{margin-top:18px;padding-top:22px;border-top:1px solid var(--line-dark);display:flex;flex-direction:column;gap:14px;font-size:14px;line-height:1.55;color:var(--muted-4)}
+.cav-credito a{color:var(--gold-2)}
+.cav-rostos{display:flex;gap:18px;align-items:flex-start}
+.cav-rostos figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px}
+.cav-rostos img{width:64px;height:64px;border-radius:50%;display:block;object-fit:contain;background:var(--cream-2)}
+.cav-rostos img.foto{object-fit:cover;object-position:center 20%;filter:grayscale(.35)}
+.cav-rostos figcaption{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2)}
+.cav-figura{margin:4px -20px 8px;display:flex;flex-direction:column;gap:6px}
+.cav-figura img{width:100%;height:auto;display:block}
+.cav-figura figcaption{padding:0 20px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2)}
+@media (min-width:760px){.cav-figura{margin:4px 0 8px}.cav-figura figcaption{padding:0}}
 </style>
 </head>
 <body>
@@ -185,6 +221,94 @@ footer .fine{font-size:13px;color:var(--muted-2);padding-top:14px;border-top:1px
 <span lang="pt">&ldquo;O foguete n&atilde;o foi a primeira grande descoberta que levou o homem a novos mundos, mas sim o microsc&oacute;pio ou talvez lentes perfeitas.&rdquo;</span><span lang="en">&ldquo;The rocket was not man&rsquo;s first great discovery that carried him to new worlds &mdash; but the microscope, or perhaps perfect lenses.&rdquo;</span>
 <span style="display:block;margin-top:8px;font-style:normal;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)">&mdash; F&aacute;bio Camara</span>
 </p>
+</div>
+</section>
+
+<section id="caverna" class="caverna" aria-labelledby="caverna-t">
+<div class="wrap">
+<div class="cav-kicker"><span lang="pt">Diálogo, a partir de Platão</span><span lang="en">A dialogue, after Plato</span></div>
+<h2 id="caverna-t"><span lang="pt">A caverna e a ferida</span><span lang="en">The cave and the wound</span></h2>
+
+<figure class="cav-figura">
+<img src="sala_fria_v4.svg" width="1200" height="490" alt="Uma sala escura com pessoas sentadas diante de computadores; uma delas se levantou, deixou o lugar vazio e caminha para uma porta iluminada. / A dark room with people seated at computers; one has stood up, left an empty seat and walks toward a lit doorway.">
+<figcaption><span lang="pt">Desenho de Fable Sicômoro Lacre e Otsu Paquímetro</span><span lang="en">Drawing by Fable Sicômoro Lacre and Otsu Paquímetro</span></figcaption>
+</figure>
+
+<div lang="pt" class="cav-dialogo">
+<p class="fala"><span class="quem">Sócrates</span>Imagina cientistas que nunca saíram de seus computadores. Passaram a vida toda observando lesões e feridas de pele em fotografias, milhares e milhares delas, uma a uma, e nunca viram outra coisa.</p>
+<p class="fala g"><span class="quem">Glauco</span>Imagino.</p>
+<details class="cav-mais">
+<summary><span class="abre">Ler o diálogo inteiro</span><span class="fecha">Recolher o diálogo</span></summary>
+<p class="fala"><span class="quem">Sócrates</span>Considera agora o que aconteceria se um deles fosse solto de sua sala fria e de seu computador. Se fosse forçado, de repente, a se levantar, ir ao leito de um paciente, olhar de perto uma ferida e ver o sofrimento que ela causa, tudo isso lhe causaria confusão, e o medo de sofrer não o deixaria aceitar, no primeiro momento, a realidade nua e crua. O que achas que ele diria, se alguém lhe afirmasse que antes só via imagens das feridas, e que agora, mais perto do que é real, vê melhor? E se, mostrando-lhe cada ferida, o obrigassem com perguntas a dizer o que é? Não achas que ficaria perdido, e julgaria que o que via antes era mais verdadeiro do que o que lhe mostram agora?</p>
+<p class="fala g"><span class="quem">Glauco</span>Muito mais verdadeiro. Na tela ele sabia o nome de tudo.</p>
+<p class="fala"><span class="quem">Sócrates</span>E se o obrigassem a ficar ali, ao lado do leito, olhando a ferida aberta? Não desviaria os olhos e não voltaria correndo para as fotos, achando que elas são mais nítidas?</p>
+<p class="fala g"><span class="quem">Glauco</span>Voltaria. Na foto a ferida não cheira e não dói.</p>
+<p class="fala"><span class="quem">Sócrates</span>Mas supõe que alguém o segure pelo braço e não o deixe voltar. Que o leve pelo corredor comprido e frio dos hospitais, de leito em leito, contra a vontade dele. Observando o sofrimento das pessoas, ele não se revoltaria?</p>
+<p class="fala g"><span class="quem">Glauco</span>Ele se revoltaria, e ao mesmo tempo tentaria ignorar a verdade, porque na fotografia não existe dor nem sofrimento.</p>
+<p class="fala"><span class="quem">Sócrates</span>Precisaria se acostumar. Primeiro só conseguiria olhar o que ainda se parece com a tela: a foto impressa no prontuário, depois a lâmina no microscópio, que também é imagem, feita com outra luz. Mais tarde olharia a ferida. Por fim, levantaria os olhos e veria a pessoa que tem a ferida.</p>
+<p class="fala g"><span class="quem">Glauco</span>É aí que ele começa a aceitar?</p>
+<p class="fala"><span class="quem">Sócrates</span>É. A luz ainda lhe dói nos olhos, mas agora já não deixa que eles se fechem para a verdade.</p>
+<p class="fala g"><span class="quem">Glauco</span>E o que veria nessa pessoa que a foto não lhe dava?</p>
+<p class="fala"><span class="quem">Sócrates</span>Que a ferida tem dono. Que ela dói em alguém, tira o sono de alguém, muda a vida de uma casa. E entenderia que é por causa dessa pessoa que tudo o mais existe: a foto, a medida, a sala fria e ele mesmo.</p>
+<p class="fala g"><span class="quem">Glauco</span>É claro que chegaria a isso.</p>
+<p class="fala"><span class="quem">Sócrates</span>E então, lembrando da sala fria e dos companheiros que ficaram lá, não teria pena deles?</p>
+<p class="fala g"><span class="quem">Glauco</span>Muita.</p>
+<p class="fala"><span class="quem">Sócrates</span>Lá havia honras e prêmios para quem adivinhasse melhor o contorno de cada foto, para quem ficasse mais perto da linha que outro tinha traçado antes. Achas que ele teria saudade disso? Ou preferiria mil vezes trocar curativo no posto mais pobre a ser o primeiro entre os que adivinham sombras?</p>
+<p class="fala g"><span class="quem">Glauco</span>Penso que preferiria o posto.</p>
+<p class="fala"><span class="quem">Sócrates</span>Agora ele volta e senta de novo diante do computador. Os olhos vêm cheios de claridade. Se tiver de competir outra vez com os que nunca saíram, julgando aquelas fotos, como se sai?</p>
+<p class="fala g"><span class="quem">Glauco</span>Mal. A linha dele já não bate com a dos outros.</p>
+<p class="fala"><span class="quem">Sócrates</span>E o que dirão dele?</p>
+<p class="fala g"><span class="quem">Glauco</span>Que saiu e voltou com a vista estragada. Que nem vale a pena sair.</p>
+<p class="fala"><span class="quem">Sócrates</span>Não os culpes, Glauco. Passaram a vida ali, e ninguém os levou pelo braço. Mas ele insiste. Diz que a ferida não acaba num risco, que a foto às vezes não mostra a borda, que nesses casos o certo é dizer que não dá. Põe tudo em frases que qualquer um pode conferir. O que fazem com ele?</p>
+<p class="fala g"><span class="quem">Glauco</span>Em outro tempo, matariam.</p>
+<p class="fala"><span class="quem">Sócrates</span>Hoje ninguém precisa tocar nele. Basta medir o que ele trouxe pela régua da sala: comparam a linha dele com a linha de sempre, veem que não coincide e dão a resposta por encerrada. Ele continua vivo, sentado no mesmo lugar. Mataram a verdade dele, não ele.</p>
+<p class="fala g"><span class="quem">Glauco</span>E ela fica morta?</p>
+<p class="fala"><span class="quem">Sócrates</span>Fica, enquanto a única régua for a linha de dentro da sala. Por isso ele não discute. Deixa as frases escritas, a conta aberta e a porta sem trancar, para o dia em que outro se levantar.</p>
+</details>
+</div>
+
+<div lang="en" class="cav-dialogo">
+<p class="fala"><span class="quem">Socrates</span>Imagine scientists who have never left their computers. They have spent their whole lives looking at skin lesions and wounds in photographs, thousands upon thousands of them, one by one, and have never seen anything else.</p>
+<p class="fala g"><span class="quem">Glaucon</span>I can imagine it.</p>
+<details class="cav-mais">
+<summary><span class="abre">Read the whole dialogue</span><span class="fecha">Fold the dialogue</span></summary>
+<p class="fala"><span class="quem">Socrates</span>Now consider what would happen if one of them were released from his cold room and his computer. Suppose he were forced, all at once, to stand up, go to a patient's bedside, look closely at a wound and see the suffering it causes. All of this would confuse him, and the fear of suffering would not let him accept, at first, the bare and raw reality. What do you think he would say if someone told him that before he saw only pictures of wounds, and that now, closer to what is real, he sees better? And if, showing him each wound, they pressed him with questions to say what it is? Don't you think he would be lost, and would believe that what he saw before was truer than what he is shown now?</p>
+<p class="fala g"><span class="quem">Glaucon</span>Far truer. On the screen he knew the name of everything.</p>
+<p class="fala"><span class="quem">Socrates</span>And if they made him stay there, beside the bed, looking at the open wound? Wouldn't he turn his eyes away and run back to the photographs, thinking them sharper?</p>
+<p class="fala g"><span class="quem">Glaucon</span>He would. In a photograph a wound does not smell and does not hurt.</p>
+<p class="fala"><span class="quem">Socrates</span>But suppose someone takes him by the arm and will not let him go back. Suppose they lead him down the long, cold hospital corridor, from bed to bed, against his will. Seeing people suffer, wouldn't he rebel?</p>
+<p class="fala g"><span class="quem">Glaucon</span>He would rebel, and at the same time he would try to ignore the truth, because in a photograph there is no pain and no suffering.</p>
+<p class="fala"><span class="quem">Socrates</span>He would need time to get used to it. At first he could only look at what still resembles the screen: the photograph printed in the patient's chart, then the slide under the microscope, which is also an image, made with another light. Later he would look at the wound. Finally he would raise his eyes and see the person who has the wound.</p>
+<p class="fala g"><span class="quem">Glaucon</span>Is that when he begins to accept it?</p>
+<p class="fala"><span class="quem">Socrates</span>It is. The light still hurts his eyes, but now it no longer lets them shut against the truth.</p>
+<p class="fala g"><span class="quem">Glaucon</span>And what would he see in that person that the photograph never gave him?</p>
+<p class="fala"><span class="quem">Socrates</span>That the wound has an owner. That it hurts someone, keeps someone awake at night, changes life in a household. And he would understand that this person is the reason everything else exists: the photograph, the measurement, the cold room, and he himself.</p>
+<p class="fala g"><span class="quem">Glaucon</span>He would be bound to come to that.</p>
+<p class="fala"><span class="quem">Socrates</span>And then, remembering the cold room and the companions who stayed behind, wouldn't he pity them?</p>
+<p class="fala g"><span class="quem">Glaucon</span>Very much.</p>
+<p class="fala"><span class="quem">Socrates</span>In there, honours and prizes went to whoever best guessed the outline in each photograph, to whoever came closest to the line someone else had drawn before. Do you think he would miss that? Or would he a thousand times rather change dressings at the poorest health post than be first among those who guess at shadows?</p>
+<p class="fala g"><span class="quem">Glaucon</span>I think he would choose the health post.</p>
+<p class="fala"><span class="quem">Socrates</span>Now he goes back and sits down again in front of the computer. His eyes are still full of light. If he has to compete once more with those who never left, judging those photographs, how does he do?</p>
+<p class="fala g"><span class="quem">Glaucon</span>Badly. His line no longer matches theirs.</p>
+<p class="fala"><span class="quem">Socrates</span>And what will they say about him?</p>
+<p class="fala g"><span class="quem">Glaucon</span>That he went out and came back with his sight ruined. That it is not even worth going out.</p>
+<p class="fala"><span class="quem">Socrates</span>Do not blame them, Glaucon. They have spent their lives in there, and no one ever took them by the arm. But he insists. He says that a wound does not end at a line, that sometimes the photograph does not show the edge, and that in those cases the right thing is to say that one cannot tell. He puts it all in sentences anyone can check. What do they do with him?</p>
+<p class="fala g"><span class="quem">Glaucon</span>In another age, they would kill him.</p>
+<p class="fala"><span class="quem">Socrates</span>Today no one needs to lay a hand on him. It is enough to measure what he brought against the ruler of the room: they compare his line with the usual line, see that the two do not match, and close the matter. He is still alive, sitting in the same place. They killed his truth, not him.</p>
+<p class="fala g"><span class="quem">Glaucon</span>And does it stay dead?</p>
+<p class="fala"><span class="quem">Socrates</span>It does, as long as the only ruler is the line from inside the room. That is why he does not argue. He leaves the sentences written, the calculations open and the door unlocked, for the day someone else stands up.</p>
+</details>
+</div>
+
+<div class="cav-credito">
+<div class="cav-rostos">
+<figure><img src="fabio.jpg" alt="Fabio da Camara Oliveira Ferreira" width="64" height="64" class="foto"><figcaption>Fabio</figcaption></figure>
+<figure><a href="ias.html"><img src="fable.svg" alt="Lacre do Fable Sicômoro Lacre / Fable Sicômoro Lacre's seal" width="64" height="64"></a><figcaption>Fable</figcaption></figure>
+<figure><a href="ias.html"><img src="otsu.svg" alt="Selo do Otsu Paquímetro / Otsu Paquímetro's badge" width="64" height="64"></a><figcaption>Otsu</figcaption></figure>
+</div>
+<p lang="pt">Versão de Fabio da Camara Oliveira Ferreira, escrita com <a href="ias.html">Fable Sicômoro Lacre e Otsu Paquímetro</a>, duas inteligências artificiais, a partir da alegoria da caverna de Platão (<em>República</em>, Livro VII, 514a a 517a).</p>
+<p lang="en">A version by Fabio da Camara Oliveira Ferreira, written with <a href="ias.html">Fable Sicômoro Lacre and Otsu Paquímetro</a>, two artificial intelligences, after Plato's allegory of the cave (<em>Republic</em>, Book VII, 514a to 517a).</p>
+</div>
 </div>
 </section>
 
