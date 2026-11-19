@@ -34,6 +34,10 @@ header .wrap{padding:14px 20px;display:flex;justify-content:space-between;align-
 .lang button{min-width:44px;min-height:44px;padding:0 10px;font:600 14px/1 'Public Sans',system-ui,sans-serif;letter-spacing:.08em;cursor:pointer;border:1px solid var(--line-dark);background:transparent;color:var(--muted-4)}
 .lang button[aria-pressed="true"]{background:var(--cream);color:var(--ink)}
 
+.entrada{background:var(--ink);color:var(--cream);padding:0;border-top:0;display:block}
+.entrada figure{margin:0}
+.entrada img{display:block;width:100%;height:auto;max-height:82vh;object-fit:cover}
+.entrada figcaption{max-width:720px;margin:0 auto;padding:10px 20px 6px;box-sizing:border-box;font-size:12px;line-height:1.5;color:var(--muted-2)}
 .hero{position:relative;background:var(--ink);color:var(--cream);padding:8px 0 72px;overflow:hidden}
 .hero .wrap{position:relative}
 .hero .wrap{display:flex;flex-direction:column;gap:28px}
@@ -159,6 +163,13 @@ section.caverna::after{content:"";position:absolute;left:0;right:0;bottom:0;heig
 </div>
 </div>
 </header>
+
+<section class="entrada" aria-label="Imagem de abertura / Opening image">
+<figure>
+<img src="tabuleiro.webp" width="1536" height="1024" alt="Uma dama branca de xadrez feita de p&aacute;ginas escritas e um rei preto dentro de uma caixa escura transl&uacute;cida, frente a frente num tabuleiro cujas casas s&atilde;o les&otilde;es de pele. / A white chess queen made of written pages and a black king inside a dark translucent box, facing each other on a board whose squares are skin lesions.">
+<figcaption><span lang="pt">Imagem criada com IA generativa (Microsoft Designer). As les&otilde;es do tabuleiro s&atilde;o ilustra&ccedil;&atilde;o, n&atilde;o fotos de pacientes.</span><span lang="en">Image created with generative AI (Microsoft Designer). The lesions on the board are an illustration, not photographs of patients.</span></figcaption>
+</figure>
+</section>
 
 <section class="hero" style="border-top:0">
 <div class="wrap">
