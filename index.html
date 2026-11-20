@@ -43,10 +43,11 @@ header .wrap{padding:14px 20px;display:flex;justify-content:space-between;align-
 .hero .wrap{display:flex;flex-direction:column;gap:28px}
 .art{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .art svg{flex:0 1 50%;min-width:0;height:auto;display:block}
-.art .portrait{flex:0 0 36%;min-width:0;display:flex;flex-direction:column;align-items:center;gap:8px}
-.art .portrait img{width:100%;aspect-ratio:1100/1240;height:auto;object-fit:cover;object-position:top;display:block;opacity:.78;filter:sepia(.9) contrast(1.05);mask-image:radial-gradient(ellipse 70% 75% at 50% 42%,#000 55%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 70% 75% at 50% 42%,#000 55%,transparent 100%)}
-.art .portrait figcaption{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-2);text-align:center}
-@media (max-width:560px){.art{flex-direction:column;align-items:stretch}.art .portrait{flex-basis:auto;flex-direction:row;justify-content:flex-end;align-items:flex-end;gap:12px}.art .portrait img{width:46%}.art .portrait figcaption{text-align:right;padding-bottom:6px}}
+.nomelinha{display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.nomelinha .portrait{flex:0 0 168px;min-width:0;display:flex;flex-direction:column;align-items:center;gap:6px}
+.nomelinha .portrait img{width:100%;aspect-ratio:1100/1240;height:auto;object-fit:cover;object-position:top;display:block;opacity:.78;filter:sepia(.9) contrast(1.05);mask-image:radial-gradient(ellipse 70% 75% at 50% 42%,#000 55%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 70% 75% at 50% 42%,#000 55%,transparent 100%)}
+.nomelinha .portrait figcaption{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-2);text-align:center}
+@media (max-width:560px){.art{flex-direction:column;align-items:stretch}.nomelinha{gap:12px}.nomelinha .portrait{flex-basis:104px}.nomelinha .portrait figcaption{font-size:9px}}
 .hero h1{margin:0;font-weight:600;font-size:clamp(30px,6vw,46px);line-height:1.12;color:var(--cream-2)}
 .role{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 .question{margin:0;font-family:'Spectral',Georgia,serif;font-style:italic;font-size:clamp(24px,4.6vw,34px);line-height:1.25;color:var(--cream);padding-top:22px;border-top:1px solid var(--line-dark)}
@@ -216,16 +217,18 @@ section.caverna::after{content:"";position:absolute;left:0;right:0;bottom:0;heig
 <path d="M520 285 L 576 341" stroke="#f1d58a" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
 <path d="M360 105 C 380 85, 410 77, 440 81" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.35" fill="none"/>
 </svg>
+</div>
+
+<div class="nomelinha">
+<div style="display:flex;flex-direction:column;gap:10px">
+<h1>Fabio da Camara<br>Oliveira Ferreira</h1>
+<div class="role"><span lang="pt">enfermeiro e pesquisador</span><span lang="en">nurse and researcher</span></div>
+</div>
 <figure class="portrait" style="margin:0">
 <img src="leeuwenhoek.webp" alt="Antoni van Leeuwenhoek segurando seu microscópio de lente única. Gravura de Jan Verkolje, 1686." width="1100" height="1496">
 <figcaption lang="pt">Leeuwenhoek, 1686 · lente única</figcaption>
 <figcaption lang="en">Leeuwenhoek, 1686 · single lens</figcaption>
 </figure>
-</div>
-
-<div style="display:flex;flex-direction:column;gap:10px">
-<h1>Fabio da Camara<br>Oliveira Ferreira</h1>
-<div class="role"><span lang="pt">enfermeiro e pesquisador</span><span lang="en">nurse and researcher</span></div>
 </div>
 <p class="question"><span lang="pt">A borda está na imagem?</span><span lang="en">Is the border in the image?</span></p>
 <p style="margin:0;font-family:'Spectral',Georgia,serif;font-style:italic;font-size:clamp(16px,2.8vw,20px);line-height:1.45;color:var(--cream-2)">
